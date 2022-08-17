@@ -21,6 +21,6 @@
 		@apply text-3xl sm:text-4xl;
 	}
 	li {
-		@apply cursor-pointer;
+		@apply cursor-pointer text-black font-semibold;
 	}
 }
