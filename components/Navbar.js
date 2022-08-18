@@ -1,32 +1,87 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import { useRouter } from "next/router";
 
 const Navbar = () => {
 	const [nav, setNav] = useState(false);
+	const [shadow, setShadow] = useState(false);
+	const [navBg, setNavBg] = useState("white");
+	const [logoLight, setLogoLight] = useState(false);
+	const [navComponentsColor, setNavComponentsColor] = useState("black");
+
+	const router = useRouter();
 
 	const handleNav = () => setNav(!nav);
+
+	useEffect(() => {
+		if (router.asPath === "/template") {
+			setNavBg("transparent");
+			setNavComponentsColor("white");
+			setLogoLight(true);
+		} else {
+			setNavBg("white");
+			setNavComponentsColor("black");
+			setLogoLight(false);
+		}
+	}, [router]);
+
+	useEffect(() => {
+		const handleShadow = () => {
+			if (window.scrollY >= 90) {
+				setShadow(true);
+			} else setShadow(false);
+		};
+		window.addEventListener("scroll", handleShadow);
+	}, []);
 	return (
-		<div className='fixed w-full h-20 shadow-xl z-10 bg-[#fcfcfc] '>
+		<div
+			style={{ backgroundColor: `${navBg}` }}
+			className={
+				shadow
+					? "fixed w-full h-20 shadow-xl z-[11]"
+					: "fixed w-full h-20 z-[11]"
+			}>
 			<div className='flex justify-between items-center w-full h-full px-4 md:px-6 2xl:px-16'>
-				<Image src='/../assets/logo.svg' width={80} height={80} alt='logo' />
-				<div className='mr-auto ml-3 border-l-2 h-[40%] flex items-center border-[#f45b69]/70'>
-					<p className=' uppercase text-xs font-bold px-2'>Konrad Piekarz</p>
+				{logoLight ? (
+					<Image
+						src='/../assets/logoLight.svg'
+						width={80}
+						height={80}
+						alt='logo'
+					/>
+				) : (
+					<Image src='/../assets/logo.svg' width={80} height={80} alt='logo' />
+				)}
+
+				<div
+					style={{ borderLeftColor: `${navComponentsColor}` }}
+					className='mr-auto ml-3 border-l-2 h-[40%] flex items-center'>
+					<p
+						style={{ color: `${navComponentsColor}` }}
+						className=' uppercase text-xs font-bold px-2'>
+						Konrad Piekarz
+					</p>
 				</div>
 				<div>
-					<ul className='hidden md:flex uppercase'>
-						<Link href='/'>
+					<ul
+						style={{ color: `${navComponentsColor}` }}
+						className='hidden md:flex uppercase'>
+						<Link href='/#home'>
 							<li className='ml-10 text-sm hover:border-b'>Home</li>
 						</Link>
-						<Link href='/'>
+						<Link href='/#about'>
 							<li className='ml-10 text-sm hover:border-b'>About</li>
 						</Link>
-						<Link href='/'>
+						<Link href='/#skills'>
+							<li className='ml-10 text-sm hover:border-b'>Skills</li>
+						</Link>
+						<Link href='/#projects'>
 							<li className='ml-10 text-sm hover:border-b'>Projects</li>
 						</Link>
-						<Link href='/'>
+						<Link href='/#contact'>
 							<li className='ml-10 text-sm hover:border-b'>Contact</li>
 						</Link>
 					</ul>
@@ -67,17 +122,30 @@ const Navbar = () => {
 
 					<div className='py-4 flex flex-col'>
 						<ul className='uppercase'>
-							<Link href='/'>
-								<li className='py-4 text-sm'>Home</li>
+							<Link href='/#home'>
+								<li onClick={() => setNav(false)} className='py-4 text-sm'>
+									Home
+								</li>
 							</Link>
-							<Link href='/'>
-								<li className='py-4 text-sm'>About</li>
+							<Link href='/#about'>
+								<li onClick={() => setNav(false)} className='py-4 text-sm'>
+									About
+								</li>
 							</Link>
-							<Link href='/'>
-								<li className='py-4 text-sm'>Projects</li>
+							<Link href='/#skills'>
+								<li onClick={() => setNav(false)} className='py-4 text-sm'>
+									Skills
+								</li>
 							</Link>
-							<Link href='/'>
-								<li className='py-4 text-sm'>Contact</li>
+							<Link href='/#projects'>
+								<li onClick={() => setNav(false)} className='py-4 text-sm'>
+									Projects
+								</li>
+							</Link>
+							<Link href='/#contact'>
+								<li onClick={() => setNav(false)} className='py-4 text-sm'>
+									Contact
+								</li>
 							</Link>
 						</ul>
 					</div>
