@@ -1,4 +1,5 @@
 import React from "react";
+import ProjectItem from "./ProjectItem";
 
 const Projects = () => {
 	return (
@@ -7,7 +8,10 @@ const Projects = () => {
 				<p className='text-xl tracking-widest uppercase'>Projects</p>
 				<h2 className='py-2'>What I've built</h2>
 				<div className='grid md:grid-cols-2 gap-8'>
-					<div className='relative flex items-center justify-center h-auto shadow-xl shadow-gray-400 rounded-xl p-4 group hover:bg-gradient-to-r from-black to-white'></div>
+					<ProjectItem />
+					<ProjectItem />
+					<ProjectItem />
+					<ProjectItem />
 				</div>
 			</div>
 		</div>
