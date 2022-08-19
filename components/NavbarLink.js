@@ -14,8 +14,8 @@ const NavbarLink = ({ name, site, from, to }) => {
 			<li
 				className={classNames(
 					scrollPosition >= from && scrollPosition <= to
-						? `ease-in duration-100 border-b-4 px-2 text-sm h-full py-[28px] ml-6 text-primary`
-						: `ease-in duration-100 hover:border-b-4 px-2 text-sm h-full py-[28px] ml-6`
+						? `ease-in duration-100 border-b-4 px-2 text-sm h-full py-[28px] ml-2 lg:ml-6 text-primary`
+						: `ease-in duration-100 hover:border-b-4 px-2 text-sm h-full py-[28px] ml-2 lg:ml-6`
 				)}>
 				{name}
 			</li>

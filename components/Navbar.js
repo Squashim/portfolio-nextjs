@@ -8,10 +8,15 @@ import NavbarLink from "./NavbarLink";
 
 const Navbar = () => {
 	const [nav, setNav] = useState(false);
+
 	const [shadow, setShadow] = useState(false);
 	const [navBg, setNavBg] = useState("rgba(0, 0, 0, 0.7)");
+
 	const [logoLight, setLogoLight] = useState(true);
 	const [navComponentsColor, setNavComponentsColor] = useState("#fefefe");
+
+	const [invertedComponentsColor, setInvertedComponentsColor] =
+		useState("#252422");
 
 	const router = useRouter();
 
@@ -34,11 +39,13 @@ const Navbar = () => {
 				setNavBg("#fefefe");
 				setLogoLight(false);
 				setNavComponentsColor("#252422");
+				setInvertedComponentsColor("#fefefe");
 			} else {
 				setShadow(false);
 				setNavBg("rgba(0, 0, 0, 0.7)");
 				setLogoLight(true);
 				setNavComponentsColor("#fefefe");
+				setInvertedComponentsColor("#252422");
 			}
 		};
 		window.addEventListener("scroll", handleShadow);
@@ -76,22 +83,27 @@ const Navbar = () => {
 						style={{ color: `${navComponentsColor}` }}
 						className='hidden md:flex uppercase my-auto mb-[4px]'>
 						<NavbarLink name={"Home"} site={"home"} from={0} to={950} />
-						<NavbarLink name={"About"} site={"about"} from={960} to={1900} />
-						<NavbarLink name={"Skills"} site={"skills"} from={1910} to={2800} />
+						<NavbarLink name={"O mnie"} site={"about"} from={960} to={1750} />
 						<NavbarLink
-							name={"Projects"}
-							site={"projects"}
-							from={2810}
-							to={3700}
+							name={"Technologie"}
+							site={"skills"}
+							from={1760}
+							to={2550}
 						/>
 						<NavbarLink
-							name={"Contact"}
+							name={"Portfolio"}
+							site={"projects"}
+							from={2560}
+							to={3250}
+						/>
+						<NavbarLink
+							name={"Kontakt"}
 							site={"contact"}
-							from={3700}
-							to={4257}
+							from={3260}
+							to={4300}
 						/>
 					</ul>
-					<div onClick={handleNav} className='md:hidden'>
+					<div onClick={handleNav} className='md:hidden my-auto'>
 						<AiOutlineMenu
 							size={25}
 							className='text-primary hover:rotate-90 cursor-pointer ease-linear duration-100'
@@ -103,12 +115,12 @@ const Navbar = () => {
 			{/* Mobile navbar */}
 			<div
 				className={
-					nav ? "md:hidden fixed left-0 top-0 w-full h-screen bg-black/70" : ""
+					nav ? "md:hidden fixed left-0 top-0 w-full h-screen bg-black/60 " : ""
 				}>
 				<div
 					className={
 						nav
-							? "fixed left-0 top-0 w-[80%] sm:w-[60%] h-screen bg-white px-10 py-5 ease-in duration-500"
+							? `fixed left-0 top-0 w-[80%] sm:w-[60%] h-screen bg-[${invertedComponentsColor}] px-10 py-5 ease-in duration-500`
 							: "fixed left-[-100%] top-0  px-10 py-5 h-screen ease-in duration-500"
 					}>
 					<div>
