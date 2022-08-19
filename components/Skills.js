@@ -1,5 +1,15 @@
 import React from "react";
 import Skill from "./Skill";
+import {
+	SiNextdotjs,
+	SiHtml5,
+	SiCss3,
+	SiJavascript,
+	SiReact,
+	SiTailwindcss,
+	SiGithub,
+	SiSass,
+} from "react-icons/si";
 
 const Skills = () => {
 	return (

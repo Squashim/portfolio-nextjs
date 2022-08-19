@@ -19,8 +19,16 @@ module.exports = {
 				darkGray: "#403d39",
 				transparent: "transparent",
 			},
-			keyframes: {},
-			animation: {},
+			keyframes: {
+				down: {
+					"0%": { transform: "translate3d(0,-100%,0)", opacity: "0" },
+					"30%": { transform: "translate3d(0,-50%,0)", opacity: "0.5" },
+					"100%": { transform: "none", opacity: "1" },
+				},
+			},
+			animation: {
+				arrDown: "down 1.5s linear infinite",
+			},
 			backgroundImage: {
 				mainImg: "url('/assets/background.jpg')",
 				lightLogo: "url('/assets/logoLight.svg')",

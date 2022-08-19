@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
@@ -93,7 +92,7 @@ const Navbar = () => {
 				<div
 					className={
 						nav
-							? `fixed left-0 top-0 w-[80%] sm:w-[60%] h-screen dark:bg-dark bg-light px-10 py-5 ease-in duration-500`
+							? `fixed left-0 top-0 w-[80%] sm:w-[60%] h-screen dark:bg-dark bg-light px-10 py-5 ease-in duration-500 `
 							: "fixed left-[-100%] top-0  px-10 py-5 h-screen ease-in duration-500"
 					}>
 					<div>
@@ -101,46 +100,56 @@ const Navbar = () => {
 							<div className=' bg-darkLogo bg-contain dark:bg-lightLogo bg-no-repeat bg-center min-h-[80px] min-w-[80px]'></div>
 							<div
 								onClick={handleNav}
-								className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer'>
-								<AiOutlineClose />
+								className='rounded-full  p-3 cursor-pointer'>
+								<AiOutlineClose
+									size={25}
+									className='text-primary ease-linear duration-300 hover:rotate-180 hover:scale-110'
+								/>
 							</div>
-						</div>
-						<div className='border-b border-gray-300 my-4'>
-							<p className='w-[85%] md:w-[90%] py-4'>Let's build something!</p>
 						</div>
 					</div>
 
-					<div className='py-4 flex flex-col'>
+					<div className='py-4 flex flex-col border-t-2 border-b-2 dark:border-light border-dark'>
 						<ul className='uppercase'>
 							<Link href='/#home'>
-								<li onClick={() => setNav(false)} className='py-4 text-sm'>
+								<li
+									onClick={() => setNav(false)}
+									className='py-4 px-2 text-sm border-l-8 border-l-transparent hover:border-l-primary ease-linear duration-100 hover:text-primary'>
 									Home
 								</li>
 							</Link>
 							<Link href='/#about'>
-								<li onClick={() => setNav(false)} className='py-4 text-sm'>
+								<li
+									onClick={() => setNav(false)}
+									className='py-4 px-2 text-sm border-l-8 border-l-transparent hover:border-l-primary ease-linear duration-100 hover:text-primary'>
 									About
 								</li>
 							</Link>
 							<Link href='/#skills'>
-								<li onClick={() => setNav(false)} className='py-4 text-sm'>
+								<li
+									onClick={() => setNav(false)}
+									className='py-4 px-2 text-sm border-l-8 border-l-transparent hover:border-l-primary ease-linear duration-100 hover:text-primary'>
 									Skills
 								</li>
 							</Link>
 							<Link href='/#projects'>
-								<li onClick={() => setNav(false)} className='py-4 text-sm'>
+								<li
+									onClick={() => setNav(false)}
+									className='py-4 px-2 text-sm border-l-8 border-l-transparent hover:border-l-primary ease-linear duration-100 hover:text-primary'>
 									Projects
 								</li>
 							</Link>
 							<Link href='/#contact'>
-								<li onClick={() => setNav(false)} className='py-4 text-sm'>
+								<li
+									onClick={() => setNav(false)}
+									className='py-4 px-2 text-sm border-l-8 border-l-transparent hover:border-l-primary ease-linear duration-100 hover:text-primary'>
 									Contact
 								</li>
 							</Link>
 						</ul>
 					</div>
 
-					<div className='flex justify-end '>
+					<div className='flex justify-end min-h-[80px] mr-3'>
 						<ThemeChanger />
 					</div>
 				</div>
