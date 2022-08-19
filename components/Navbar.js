@@ -5,30 +5,23 @@ import { useState, useEffect } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { useRouter } from "next/router";
 import NavbarLink from "./NavbarLink";
+import ThemeChanger from "./ThemeChanger";
 
 const Navbar = () => {
 	const [nav, setNav] = useState(false);
-
 	const [shadow, setShadow] = useState(false);
-	const [navBg, setNavBg] = useState("rgba(0, 0, 0, 0.7)");
-
-	const [logoLight, setLogoLight] = useState(true);
-	const [navComponentsColor, setNavComponentsColor] = useState("#fefefe");
 
 	const [invertedComponentsColor, setInvertedComponentsColor] =
 		useState("#252422");
 
 	const router = useRouter();
-
 	const handleNav = () => setNav(!nav);
 
 	useEffect(() => {
 		if (router.asPath === "/template") {
-			setNavBg("transparent");
 			setNavComponentsColor("#fefefe");
 			setLogoLight(true);
 		} else {
-			setNavBg("rgba(0, 0, 0, 0.7)");
 		}
 	}, [router]);
 
@@ -36,15 +29,9 @@ const Navbar = () => {
 		const handleShadow = () => {
 			if (window.scrollY >= 90) {
 				setShadow(true);
-				setNavBg("#fefefe");
-				setLogoLight(false);
-				setNavComponentsColor("#252422");
 				setInvertedComponentsColor("#fefefe");
 			} else {
 				setShadow(false);
-				setNavBg("rgba(0, 0, 0, 0.7)");
-				setLogoLight(true);
-				setNavComponentsColor("#fefefe");
 				setInvertedComponentsColor("#252422");
 			}
 		};
@@ -53,35 +40,20 @@ const Navbar = () => {
 
 	return (
 		<div
-			style={{ backgroundColor: `${navBg}` }}
 			className={
 				shadow
-					? "fixed w-full h-20 shadow-xl z-[11] ease-linear duration-100 "
-					: "fixed w-full h-20 z-[11] ease-linear duration-100"
+					? " dark:bg-dark bg-light fixed w-full h-20 shadow-black/20 shadow-2xl dark:shadow-black z-[11] ease-linear duration-100 "
+					: "dark:text-light dark:bg-dark text-dark bg-light fixed w-full h-20 z-[11] ease-linear duration-100"
 			}>
-			<div className='flex justify-between items-center w-full h-full px-4 md:px-6 2xl:px-16'>
-				{logoLight ? (
-					<Image
-						src='/../assets/logoLight.svg'
-						width={80}
-						height={80}
-						alt='logo'
-					/>
-				) : (
-					<Image src='/../assets/logo.svg' width={80} height={80} alt='logo' />
-				)}
-
+			<div className='flex justify-between items-center w-full h-full px-4 md:px-4 2xl:px-16'>
+				<div className=' bg-darkLogo bg-contain dark:bg-lightLogo bg-no-repeat bg-center min-h-[80px] min-w-[80px]'></div>
 				<div className='mr-auto ml-3 border-l-2 h-[40%] flex items-center border-l-primary'>
-					<p
-						style={{ color: `${navComponentsColor}` }}
-						className=' uppercase text-xs font-semibold px-4'>
+					<p className='  uppercase text-xs font-semibold px-4'>
 						Konrad Piekarz
 					</p>
 				</div>
 				<div className='h-full flex'>
-					<ul
-						style={{ color: `${navComponentsColor}` }}
-						className='hidden md:flex uppercase my-auto mb-[4px]'>
+					<ul className='hidden md:flex uppercase my-auto mb-[4px] dark:text-light text-dark'>
 						<NavbarLink name={"Home"} site={"home"} from={0} to={950} />
 						<NavbarLink name={"O mnie"} site={"about"} from={960} to={1750} />
 						<NavbarLink
@@ -102,6 +74,7 @@ const Navbar = () => {
 							from={3260}
 							to={4300}
 						/>
+						<ThemeChanger />
 					</ul>
 					<div onClick={handleNav} className='md:hidden my-auto'>
 						<AiOutlineMenu

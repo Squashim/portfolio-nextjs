@@ -7,18 +7,18 @@ const About = () => {
 				<div className='col-span-2'>
 					<p className='text-xl tracking-widest uppercase'>About</p>
 					<h2 className='py-4'>Who I am</h2>
-					<p className='py-2 text-gray-600'>Lorem ipsum dolor sit amet.</p>
-					<p className='py-2 text-gray-600'>
+					<p className='py-2 '>Lorem ipsum dolor sit amet.</p>
+					<p className='py-2 '>
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni,
 						laborum culpa. Provident exercitationem quaerat tempore animi modi
 						necessitatibus, aut ad.
 					</p>
-					<p className='py-2 text-gray-600'>
+					<p className='py-2'>
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
 						in dignissimos nisi, error quos amet modi maxime enim eum officiis,
 						odit architecto, hic laudantium quisquam.
 					</p>
-					<p className='py-2 text-gray-600 cursor-pointer underline'>
+					<p className='py-2 cursor-pointer underline'>
 						Check out my latest projects!
 					</p>
 				</div>
