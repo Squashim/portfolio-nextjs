@@ -7,15 +7,13 @@ const Main = () => {
 		<div id='home' className='w-full h-screen text-center bg-white'>
 			<div className='max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center'>
 				<div>
-					<p className='uppercase text-sm tracking-wide text-black'>
-						Lets build something together
-					</p>
-					<h1 className='py-4 text-[#1e1e1e]'>
-						Hi, I'm <span className='text-black'>Konrad</span>
+					<h1 className='py-4 text-dark uppercase'>
+						<span className='text-primary block uppercase py-2'>
+							front-end{" "}
+						</span>
+						developer
 					</h1>
-					<h2 className='text-[#1e1e1e] capitalize'>
-						A front-end web developer
-					</h2>
+					<h2 className='text-[#1e1e1e] capitalize'>konrad piekarz</h2>
 					<p className='py-4 text-gray-600 max-w-[70%] m-auto'>
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus,
 						sunt officiis ipsa veritatis nam pariatur quasi explicabo enim
