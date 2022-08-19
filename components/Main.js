@@ -2,25 +2,25 @@ import React from "react";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
 import { BsFillPersonLinesFill } from "react-icons/bs";
+import Image from "next/image";
+
 const Main = () => {
 	return (
-		<div id='home' className='w-full h-screen text-center bg-white'>
+		<div id='home' className='w-full h-screen text-center relative'>
+			<div className='bg-mainImg absolute w-full h-full bg-cover z-[-2] filter blur-[2px]'></div>
+			<div className='bg-black/60 absolute w-full h-full z-[-1] '></div>
+
 			<div className='max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center'>
 				<div>
-					<h1 className='py-4 text-dark uppercase'>
-						<span className='text-primary block uppercase py-2'>
-							front-end{" "}
-						</span>
-						developer
+					<h1 className='py-4 text-light uppercase tracking-wide'>
+						front<span className='text-primary uppercase'>-end</span>
+						<br />
+						<span className='text-primary uppercase'>web-</span>developer
 					</h1>
-					<h2 className='text-[#1e1e1e] capitalize'>konrad piekarz</h2>
-					<p className='py-4 text-gray-600 max-w-[70%] m-auto'>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus,
-						sunt officiis ipsa veritatis nam pariatur quasi explicabo enim
-						adipisci itaque, qui, illo dolores corrupti esse magnam repellendus
-						minus fugiat officia!
-					</p>
-					<div className='flex items-center justify-between max-w-[330px] m-auto py-4'>
+					<h2 className='text-light text-sm uppercase tracking-wider font-semibold italic'>
+						konrad piekarz
+					</h2>
+					{/*<div className='flex items-center justify-between max-w-[330px] m-auto py-4'>
 						<div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer ease-in duration-300 hover:scale-105'>
 							<FaLinkedinIn />
 						</div>
@@ -33,7 +33,7 @@ const Main = () => {
 						<div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer ease-in duration-300 hover:scale-105'>
 							<BsFillPersonLinesFill />
 						</div>
-					</div>
+					</div>*/}
 				</div>
 			</div>
 		</div>

@@ -4,13 +4,14 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { useRouter } from "next/router";
+import NavbarLink from "./NavbarLink";
 
 const Navbar = () => {
 	const [nav, setNav] = useState(false);
 	const [shadow, setShadow] = useState(false);
-	const [navBg, setNavBg] = useState("white");
-	const [logoLight, setLogoLight] = useState(false);
-	const [navComponentsColor, setNavComponentsColor] = useState("black");
+	const [navBg, setNavBg] = useState("rgba(0, 0, 0, 0.7)");
+	const [logoLight, setLogoLight] = useState(true);
+	const [navComponentsColor, setNavComponentsColor] = useState("#fefefe");
 
 	const router = useRouter();
 
@@ -19,12 +20,10 @@ const Navbar = () => {
 	useEffect(() => {
 		if (router.asPath === "/template") {
 			setNavBg("transparent");
-			setNavComponentsColor("white");
+			setNavComponentsColor("#fefefe");
 			setLogoLight(true);
 		} else {
-			setNavBg("white");
-			setNavComponentsColor("black");
-			setLogoLight(false);
+			setNavBg("rgba(0, 0, 0, 0.7)");
 		}
 	}, [router]);
 
@@ -32,17 +31,26 @@ const Navbar = () => {
 		const handleShadow = () => {
 			if (window.scrollY >= 90) {
 				setShadow(true);
-			} else setShadow(false);
+				setNavBg("#fefefe");
+				setLogoLight(false);
+				setNavComponentsColor("#252422");
+			} else {
+				setShadow(false);
+				setNavBg("rgba(0, 0, 0, 0.7)");
+				setLogoLight(true);
+				setNavComponentsColor("#fefefe");
+			}
 		};
 		window.addEventListener("scroll", handleShadow);
 	}, []);
+
 	return (
 		<div
 			style={{ backgroundColor: `${navBg}` }}
 			className={
 				shadow
-					? "fixed w-full h-20 shadow-xl z-[11]"
-					: "fixed w-full h-20 z-[11]"
+					? "fixed w-full h-20 shadow-xl z-[11] ease-linear duration-100 "
+					: "fixed w-full h-20 z-[11] ease-linear duration-100"
 			}>
 			<div className='flex justify-between items-center w-full h-full px-4 md:px-6 2xl:px-16'>
 				{logoLight ? (
@@ -56,41 +64,38 @@ const Navbar = () => {
 					<Image src='/../assets/logo.svg' width={80} height={80} alt='logo' />
 				)}
 
-				<div
-					style={{ borderLeftColor: `${navComponentsColor}` }}
-					className='mr-auto ml-3 border-l-2 h-[40%] flex items-center'>
+				<div className='mr-auto ml-3 border-l-2 h-[40%] flex items-center border-l-primary'>
 					<p
 						style={{ color: `${navComponentsColor}` }}
-						className=' uppercase text-xs font-bold px-2'>
+						className=' uppercase text-xs font-semibold px-4'>
 						Konrad Piekarz
 					</p>
 				</div>
-				<div>
+				<div className='h-full flex'>
 					<ul
 						style={{ color: `${navComponentsColor}` }}
-						className='hidden md:flex uppercase'>
-						<Link href='/#home'>
-							<li className='ml-10 text-sm hover:border-b'>Home</li>
-						</Link>
-						<Link href='/#about'>
-							<li className='ml-10 text-sm hover:border-b'>About</li>
-						</Link>
-						<Link href='/#skills'>
-							<li className='ml-10 text-sm hover:border-b'>Skills</li>
-						</Link>
-						<Link href='/#projects'>
-							<li className='ml-10 text-sm hover:border-b'>Projects</li>
-						</Link>
-						<Link href='/#contact'>
-							<li className='ml-10 text-sm hover:border-b'>Contact</li>
-						</Link>
+						className='hidden md:flex uppercase my-auto mb-[4px]'>
+						<NavbarLink name={"Home"} site={"home"} from={0} to={950} />
+						<NavbarLink name={"About"} site={"about"} from={960} to={1900} />
+						<NavbarLink name={"Skills"} site={"skills"} from={1910} to={2800} />
+						<NavbarLink name={"Projects"} site={"home"} from={2810} to={3700} />
+						<NavbarLink
+							name={"Contact"}
+							site={"contact"}
+							from={3700}
+							to={4257}
+						/>
 					</ul>
 					<div onClick={handleNav} className='md:hidden'>
-						<AiOutlineMenu size={25} />
+						<AiOutlineMenu
+							size={25}
+							className='text-primary hover:rotate-90 cursor-pointer ease-linear duration-100'
+						/>
 					</div>
 				</div>
 			</div>
 
+			{/* Mobile navbar */}
 			<div
 				className={
 					nav ? "md:hidden fixed left-0 top-0 w-full h-screen bg-black/70" : ""
