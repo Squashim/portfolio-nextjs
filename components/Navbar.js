@@ -93,17 +93,12 @@ const Navbar = () => {
 				<div
 					className={
 						nav
-							? `fixed left-0 top-0 w-[80%] sm:w-[60%] h-screen bg-[${invertedComponentsColor}] px-10 py-5 ease-in duration-500`
+							? `fixed left-0 top-0 w-[80%] sm:w-[60%] h-screen dark:bg-dark bg-light px-10 py-5 ease-in duration-500`
 							: "fixed left-[-100%] top-0  px-10 py-5 h-screen ease-in duration-500"
 					}>
 					<div>
 						<div className='flex w-full items-center justify-between'>
-							<Image
-								src='/../assets/logo.svg'
-								width={80}
-								height={80}
-								alt='logo'
-							/>
+							<div className=' bg-darkLogo bg-contain dark:bg-lightLogo bg-no-repeat bg-center min-h-[80px] min-w-[80px]'></div>
 							<div
 								onClick={handleNav}
 								className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer'>
@@ -143,6 +138,10 @@ const Navbar = () => {
 								</li>
 							</Link>
 						</ul>
+					</div>
+
+					<div className='flex justify-end '>
+						<ThemeChanger />
 					</div>
 				</div>
 			</div>
