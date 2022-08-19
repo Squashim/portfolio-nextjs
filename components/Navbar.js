@@ -78,7 +78,12 @@ const Navbar = () => {
 						<NavbarLink name={"Home"} site={"home"} from={0} to={950} />
 						<NavbarLink name={"About"} site={"about"} from={960} to={1900} />
 						<NavbarLink name={"Skills"} site={"skills"} from={1910} to={2800} />
-						<NavbarLink name={"Projects"} site={"home"} from={2810} to={3700} />
+						<NavbarLink
+							name={"Projects"}
+							site={"projects"}
+							from={2810}
+							to={3700}
+						/>
 						<NavbarLink
 							name={"Contact"}
 							site={"contact"}

@@ -5,8 +5,6 @@ import { useScrollPosition } from "../hooks/useScrollPosition";
 const NavbarLink = ({ name, site, from, to }) => {
 	const scrollPosition = useScrollPosition();
 
-	console.log(scrollPosition);
-
 	function classNames(...classes) {
 		return classes.filter(Boolean).join(" ");
 	}
