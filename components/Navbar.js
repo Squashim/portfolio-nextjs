@@ -17,14 +17,6 @@ const Navbar = () => {
 	const handleNav = () => setNav(!nav);
 
 	useEffect(() => {
-		if (router.asPath === "/template") {
-			setNavComponentsColor("#fefefe");
-			setLogoLight(true);
-		} else {
-		}
-	}, [router]);
-
-	useEffect(() => {
 		const handleShadow = () => {
 			if (window.scrollY >= 90) {
 				setShadow(true);
