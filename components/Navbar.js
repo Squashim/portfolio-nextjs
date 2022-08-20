@@ -5,6 +5,7 @@ import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { useRouter } from "next/router";
 import NavbarLink from "./NavbarLink";
 import ThemeChanger from "./ThemeChanger";
+import { SiGithub, SiFrontendmentor, SiLinkedin } from "react-icons/si";
 
 const Navbar = () => {
 	const [nav, setNav] = useState(false);
@@ -114,28 +115,28 @@ const Navbar = () => {
 								<li
 									onClick={() => setNav(false)}
 									className='py-4 px-2 text-sm border-l-8 border-l-transparent hover:border-l-primary ease-linear duration-100 hover:text-primary'>
-									About
+									O mnie
 								</li>
 							</Link>
 							<Link href='/#skills'>
 								<li
 									onClick={() => setNav(false)}
 									className='py-4 px-2 text-sm border-l-8 border-l-transparent hover:border-l-primary ease-linear duration-100 hover:text-primary'>
-									Skills
+									Technologie
 								</li>
 							</Link>
 							<Link href='/#projects'>
 								<li
 									onClick={() => setNav(false)}
 									className='py-4 px-2 text-sm border-l-8 border-l-transparent hover:border-l-primary ease-linear duration-100 hover:text-primary'>
-									Projects
+									Portfolio
 								</li>
 							</Link>
 							<Link href='/#contact'>
 								<li
 									onClick={() => setNav(false)}
 									className='py-4 px-2 text-sm border-l-8 border-l-transparent hover:border-l-primary ease-linear duration-100 hover:text-primary'>
-									Contact
+									Kontakt
 								</li>
 							</Link>
 						</ul>
@@ -143,6 +144,32 @@ const Navbar = () => {
 
 					<div className='flex justify-end min-h-[80px] mr-3'>
 						<ThemeChanger />
+					</div>
+
+					<div className='flex flex-col'>
+						<h3 className='text-center font-semibold text-lg'>
+							Znajdź mnie na
+						</h3>
+						<div className='flex items-center justify-center'>
+							<a
+								href='https://www.frontendmentor.io/profile/Squashim'
+								target='_blank'
+								className='mx-auto pt-6 text-center hover:text-primary hover:scale-110 ease duration-100'>
+								<SiFrontendmentor size={30} className='mx-auto' />
+							</a>
+							<a
+								href='https://github.com/Squashim'
+								target='_blank'
+								className='mx-auto pt-6 text-center hover:text-primary hover:scale-110 ease duration-100'>
+								<SiGithub size={30} className='mx-auto' />
+							</a>
+							<a
+								href='https://www.linkedin.com/in/konrad-piekarz-9a6428244/'
+								target='_blank'
+								className='mx-auto pt-6 text-center hover:text-primary hover:scale-110 ease duration-100'>
+								<SiLinkedin size={30} className='mx-auto' />
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
