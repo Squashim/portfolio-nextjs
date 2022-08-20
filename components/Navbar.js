@@ -38,7 +38,9 @@ const Navbar = () => {
 					: "dark:text-light dark:bg-dark text-dark bg-light fixed w-full h-20 z-[11] ease-linear duration-100"
 			}>
 			<div className='flex justify-between items-center w-full h-full px-4 md:px-4 2xl:px-16'>
-				<div className=' bg-darkLogo bg-contain dark:bg-lightLogo bg-no-repeat bg-center min-h-[80px] min-w-[80px]'></div>
+				<Link href='/'>
+					<div className='cursor-pointer bg-darkLogo bg-contain dark:bg-lightLogo bg-no-repeat bg-center min-h-[80px] min-w-[80px]'></div>
+				</Link>
 				<div className='mr-auto ml-3 border-l-2 h-[40%] flex items-center border-l-primary'>
 					<p className='  uppercase text-xs font-semibold px-4'>
 						Konrad Piekarz
