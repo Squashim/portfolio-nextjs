@@ -1,15 +1,22 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 import picture from "/public/assets/picture.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const About = () => {
+	useEffect(() => {
+		AOS.init({ duration: 1000 });
+		AOS.refresh();
+	}, []);
+
 	return (
 		<div
 			id='about'
 			className='w-full md:h-auto px-6 flex items-center py-16 dark:bg-darkGray bg-lightGray'>
 			<div className='max-w-[1240px] m-auto md:grid grid-cols-3 gap-8 py-12'>
-				<div className='col-span-2'>
+				<div className='col-span-2' data-aos='fade-right'>
 					<p className='text-xl tracking-widest uppercase text-primary'>
 						O mnie
 					</p>
@@ -74,7 +81,9 @@ const About = () => {
 						</button>
 					</Link>
 				</div>
-				<div className='md:max-h-[600px] md:my-auto my-6 w-full  h-auto m-auto shadow-xl dark:hover:bg-primary hover:bg-primary bg-darkGray dark:bg-dark shadow-black/20 dark:shadow-black rounded-xl flex items-center justify-center p-4 hover:scale-105 ease-in duration-300'>
+				<div
+					data-aos='fade-left'
+					className='md:max-h-[600px] md:my-auto my-6 w-full  h-auto m-auto shadow-xl dark:hover:bg-primary hover:bg-primary bg-darkGray dark:bg-dark shadow-black/20 dark:shadow-black rounded-xl flex items-center justify-center p-4 hover:scale-105 ease-in duration-300'>
 					<Image className='rounded-xl' src={picture} alt='picture' />
 				</div>
 			</div>

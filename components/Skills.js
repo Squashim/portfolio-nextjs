@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Skill from "./Skill";
 import {
 	SiNextdotjs,
@@ -10,11 +10,19 @@ import {
 	SiGithub,
 	SiSass,
 } from "react-icons/si";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Skills = () => {
+	useEffect(() => {
+		AOS.init({ duration: 1000 });
+		AOS.refresh();
+	}, []);
 	return (
 		<div id='skills' className='w-full lg:h-screen px-6 py-16 '>
-			<div className='max-w-[1240px] mx-auto flex flex-col justify-center h-full'>
+			<div
+				data-aos='fade-right'
+				className='max-w-[1240px] mx-auto flex flex-col justify-center h-full'>
 				<p className='text-xl tracking-widest uppercase text-primary'>
 					Technologie
 				</p>
