@@ -2,7 +2,6 @@ import React from "react";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import { useRouter } from "next/router";
 import NavbarLink from "./NavbarLink";
 import ThemeChanger from "./ThemeChanger";
 import { SiGithub, SiFrontendmentor, SiLinkedin } from "react-icons/si";
@@ -11,26 +10,21 @@ const Navbar = () => {
 	const [nav, setNav] = useState(false);
 	const [shadow, setShadow] = useState(false);
 
-	const [invertedComponentsColor, setInvertedComponentsColor] =
-		useState("#252422");
-	const router = useRouter();
 	const handleNav = () => setNav(!nav);
 
 	useEffect(() => {
 		const handleShadow = () => {
 			if (window.scrollY >= 90) {
 				setShadow(true);
-				setInvertedComponentsColor("#fefefe");
 			} else {
 				setShadow(false);
-				setInvertedComponentsColor("#252422");
 			}
 		};
 		window.addEventListener("scroll", handleShadow);
 	}, []);
 
 	return (
-		<div
+		<nav
 			className={
 				shadow
 					? " dark:bg-dark bg-light fixed w-full h-20 shadow-black/20 shadow-2xl dark:shadow-black z-[11] ease-linear duration-100 "
@@ -174,7 +168,7 @@ const Navbar = () => {
 					</div>
 				</div>
 			</div>
-		</div>
+		</nav>
 	);
 };
 
