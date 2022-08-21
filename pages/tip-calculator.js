@@ -48,7 +48,7 @@ const template = () => {
 					</p>
 					<a
 						href='https://squashim.github.io/tip-calculator/'
-						rel='noopener'
+						rel='noreferrer'
 						target='_blank'>
 						<button className='shadow-lg dark:shadow-black shadow-black/20 ease duration-100 hover:scale-105 px-8 py-2 mt-4 dark:hover:bg-transparent hover:border-primary hover:bg-transparent hover:text-dark text-light border-dark bg-dark dark:hover:text-light tracking-wider md:mr-10 mr-5 dark:bg-light dark:text-dark font-bold uppercase rounded-md border-2'>
 							Live
@@ -56,7 +56,7 @@ const template = () => {
 					</a>
 					<a
 						href='https://github.com/Squashim/tip-calculator'
-						rel='noopener'
+						rel='noreferrer'
 						target='_blank'>
 						<button className='shadow-lg dark:shadow-black shadow-black/20 ease duration-100 hover:scale-105 px-8 py-2 mt-4 dark:hover:bg-primary hover:border-primary hover:bg-primary dark:hover:text-dark text-light border-dark bg-dark  tracking-wider  md:mr-10 dark:bg-light dark:text-dark font-bold uppercase rounded-md border-2'>
 							Code

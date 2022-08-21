@@ -1,5 +1,7 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import picture from "/public/assets/picture.png";
 
 const About = () => {
 	return (
@@ -73,7 +75,7 @@ const About = () => {
 					</Link>
 				</div>
 				<div className='md:max-h-[600px] md:my-auto my-6 w-full  h-auto m-auto shadow-xl dark:hover:bg-primary hover:bg-primary bg-darkGray dark:bg-dark shadow-black/20 dark:shadow-black rounded-xl flex items-center justify-center p-4 hover:scale-105 ease-in duration-300'>
-					<img className='rounded-xl' src='/assets/picture.png' alt='picture' />
+					<Image className='rounded-xl' src={picture} alt='picture' />
 				</div>
 			</div>
 		</div>

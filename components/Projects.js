@@ -60,7 +60,7 @@ const Projects = () => {
 					<a
 						href='https://github.com/Squashim'
 						target='_blank'
-						rel='noopener'
+						rel='noreferrer'
 						className='mx-auto pt-6 text-center hover:scale-110 ease duration-100'>
 						<SiGithub size={40} className='mx-auto' />
 						<p className='text-primary font-sm font-semibold pt-2'>
