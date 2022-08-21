@@ -30,15 +30,15 @@ const template = () => {
 				<div className='col-span-4 '>
 					<h2>O Projekcie</h2>
 					<p className='py-6  first-letter:font-semibold'>
-						Strona, do której stworzenia wykorzystałem API pogodowe, NextJs'a, a
-						do stylizacji Tailwind'a. Po wpisaniu w pasek wyszukiwania
-						miejscowości, aplikacja wyświetla podstawowe dane pogodowe, takie
-						jak temperatura, zachmurzenie, wilgotność, opady itd. W niedługim
-						czasie mam zamiar usprawnić stronę i stworzyć możliwość wyświetlenia
-						dodatkowych informacji, zamiany jednostek temperatury (obecnie tylko
-						stopnie Celsjusza), a także sprawić aby zdjęcie w tle było
-						dopasowywane do wyświetlonej pogody. Do stworzenia strony
-						wykorzystałem poradnik z kanału{" "}
+						Strona, do której stworzenia wykorzystałem API pogodowe,
+						NextJs&apos;a, a do stylizacji Tailwind&apos;a. Po wpisaniu w pasek
+						wyszukiwania miejscowości, aplikacja wyświetla podstawowe dane
+						pogodowe, takie jak temperatura, zachmurzenie, wilgotność, opady
+						itd. W niedługim czasie mam zamiar usprawnić stronę i stworzyć
+						możliwość wyświetlenia dodatkowych informacji, zamiany jednostek
+						temperatury (obecnie tylko stopnie Celsjusza), a także sprawić aby
+						zdjęcie w tle było dopasowywane do wyświetlonej pogody. Do
+						stworzenia strony wykorzystałem poradnik z kanału{" "}
 						<a
 							href='https://www.youtube.com/channel/UCmT9TwcIb_yAe7-Uqhn3fBA/featured'
 							className='italic text-primary font-semibold'>
@@ -48,6 +48,7 @@ const template = () => {
 					</p>
 					<a
 						href='https://nextjs-weather-m6r069sl7-squashim.vercel.app/'
+						rel='noopener'
 						target='_blank'>
 						<button className='shadow-lg dark:shadow-black shadow-black/20 ease duration-100 hover:scale-105 px-8 py-2 mt-4 dark:hover:bg-transparent hover:border-primary hover:bg-transparent hover:text-dark text-light border-dark bg-dark dark:hover:text-light tracking-wider md:mr-10 mr-5 dark:bg-light dark:text-dark font-bold uppercase rounded-md border-2'>
 							Live
@@ -55,6 +56,7 @@ const template = () => {
 					</a>
 					<a
 						href='https://github.com/Squashim/nextjs-weather-app'
+						rel='noopener'
 						target='_blank'>
 						<button className='shadow-lg dark:shadow-black shadow-black/20 ease duration-100 hover:scale-105 px-8 py-2 mt-4 dark:hover:bg-primary hover:border-primary hover:bg-primary dark:hover:text-dark text-light border-dark bg-dark  tracking-wider  md:mr-10 dark:bg-light dark:text-dark font-bold uppercase rounded-md border-2'>
 							Code
