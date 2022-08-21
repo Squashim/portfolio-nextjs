@@ -33,21 +33,21 @@ const Contact = () => {
 						<div className='flex items-center justify-center py-6'>
 							<a
 								href='https://www.frontendmentor.io/profile/Squashim'
-								rel='noopener'
+								rel='noreferrer'
 								target='_blank'
 								className='mx-auto pt-6 text-center hover:text-primary hover:scale-110 ease duration-100'>
 								<SiFrontendmentor size={40} className='mx-auto' />
 							</a>
 							<a
 								href='https://github.com/Squashim'
-								rel='noopener'
+								rel='noreferrer'
 								target='_blank'
 								className='mx-auto pt-6 text-center hover:text-primary hover:scale-110 ease duration-100'>
 								<SiGithub size={40} className='mx-auto' />
 							</a>
 							<a
 								href='https://www.linkedin.com/in/konrad-piekarz-9a6428244/'
-								rel='noopener'
+								rel='noreferrer'
 								target='_blank'
 								className='mx-auto pt-6 text-center hover:text-primary hover:scale-110 ease duration-100'>
 								<SiLinkedin size={40} className='mx-auto' />
