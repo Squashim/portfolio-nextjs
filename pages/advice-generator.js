@@ -59,10 +59,10 @@ const template = () => {
 						</button>
 					</a>
 				</div>
-				<div className='col-span-4 md:col-span-1 shadow-xl shadow-black/20 dark:shadow-black rounded-xl p-4'>
+				<div className='col-span-4 md:col-span-1 shadow-xl shadow-black/20 dark:shadow-black rounded-xl p-1 lg:p-4'>
 					<div className='p-1 m-auto'>
 						<p className='text-center font-bold pb-4'>Technologie</p>
-						<div className='grid grid-cols-3 md:grid-cols-1 '>
+						<div className='grid grid-cols-2 md:grid-cols-1 text-xs sm:text-base sm:grid-cols-3'>
 							<p className='dark:text-light text-dark py-2 flex items-center uppercase gap-2'>
 								<RiRadioButtonFill className='pr-1 text-primary' /> html
 							</p>
