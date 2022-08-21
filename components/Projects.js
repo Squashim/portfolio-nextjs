@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import ProjectItem from "./ProjectItem";
 import shoesImg from "../public/assets/project_shoes.png";
 import cardDetails from "../public/assets/card_details.png";
@@ -7,17 +7,11 @@ import { SiGithub } from "react-icons/si";
 import weatherImg from "../public/assets/weather_app.png";
 import dropdownImg from "../public/assets/dropdown-page.png";
 import adviceImg from "../public/assets/advice.png";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 const Projects = () => {
-	useEffect(() => {
-		AOS.init({ duration: 1000 });
-		AOS.refresh();
-	}, []);
 	return (
 		<div id='projects' className='w-full dark:bg-darkGray bg-lightGray py-16'>
-			<div data-aos='fade-right' className='max-w-[1240px] mx-auto px-6 pt-16'>
+			<div className='max-w-[1240px] mx-auto px-6 pt-16'>
 				<p className='text-xl tracking-widest uppercase text-primary'>
 					Portfolio
 				</p>

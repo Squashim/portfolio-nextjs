@@ -1,21 +1,13 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Link from "next/link";
 import { GrMail } from "react-icons/gr";
 import { BsChevronUp } from "react-icons/bs";
 import { SiGithub, SiFrontendmentor, SiLinkedin } from "react-icons/si";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 const Contact = () => {
-	useEffect(() => {
-		AOS.init({ duration: 1000 });
-		AOS.refresh();
-	}, []);
 	return (
 		<div id='contact' className='w-full '>
-			<div
-				data-aos='fade-right'
-				className='max-w-[1240px] m-auto px-6 py-16 w-full flex flex-col items-center justify-center relative'>
+			<div className='max-w-[1240px] m-auto px-6 py-16 w-full flex flex-col items-center justify-center relative'>
 				<p className='text-xl tracking-widest uppercase text-primary pt-16'>
 					Kontakt
 				</p>

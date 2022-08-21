@@ -1,22 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect } from "react";
+import React from "react";
 import picture from "/public/assets/picture.png";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 const About = () => {
-	useEffect(() => {
-		AOS.init({ duration: 1000 });
-		AOS.refresh();
-	}, []);
-
 	return (
 		<div
 			id='about'
 			className='w-full md:h-auto px-6 flex items-center py-16 dark:bg-darkGray bg-lightGray'>
 			<div className='max-w-[1240px] m-auto md:grid grid-cols-3 gap-8 py-12'>
-				<div className='col-span-2' data-aos='fade-right'>
+				<div className='col-span-2'>
 					<p className='text-xl tracking-widest uppercase text-primary'>
 						O mnie
 					</p>
