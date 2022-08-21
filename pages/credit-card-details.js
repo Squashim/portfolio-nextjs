@@ -19,21 +19,29 @@ const template = () => {
 					objectFit='cover'
 				/>
 				<div className='px-6 absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2'>
-					<h2 className='py-4'>E-commerce Shoes Page</h2>
-					<h3 className='font-semibold text-primary'>HTML / SCSS / REACT</h3>
+					<h2 className='py-4'>Credit Card Details Form</h2>
+					<h3 className='font-semibold text-primary'>HTML / SASS / CSS / JS</h3>
 				</div>
 			</div>
 
 			<div className='max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 pt-16 px-6'>
 				<div className='col-span-4 '>
 					<h2>O Projekcie</h2>
-					<p className='py-6 first-letter:text-primary first-letter:font-semibold'>
-						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi
-						voluptate ut blanditiis facilis quis ducimus quaerat labore,
-						doloremque veniam earum numquam perferendis nobis dolorem
-						dignissimos, unde dicta. Omnis voluptatum cupiditate necessitatibus.
-						Quam nostrum id explicabo maxime. Adipisci tempora ratione
-						necessitatibus?
+					<p className='py-6  first-letter:font-semibold'>
+						Jest to jedno z nowszych wyzwań na stronie{" "}
+						<a
+							href='https://www.frontendmentor.io/'
+							className='italic font-semibold text-primary'>
+							Frontend Mentor
+						</a>
+						, który pomaga w ćwiczeniu umiejętności związanych z Front-Endem.
+						Głównym zamysłem tej strony jest przekazywanie danych wpisanych
+						przez użytkownika do formularza w czasie rzeczywistym na zdjęcie
+						przedstawiające kartę kredytową, a także obsługa i wyświetlanie
+						błędów popełnionych w formularzu. Użytkownicy powinni być w stanie
+						zobaczyć optymalny układ strony w zależności od rozmiaru ekranu ich
+						urządzenia, a także zobaczyć zmienny stan po najechaniu kursorem na
+						interaktywne elementy strony.
 					</p>
 					<a
 						href='https://squashim.github.io/details-card-form/'

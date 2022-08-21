@@ -18,9 +18,11 @@ const Contact = () => {
 
 					<div className='flex w-full items-center py-6 justify-center flex-col my-12'>
 						<h3 className='text-4xl font-semibold'>Napisz do mnie na:</h3>
-						<div className='flex gap-2 py-4 hover:text-primary hover:scale-110 ease duration-100'>
-							<GrMail size={30} />
-							<p className='text-xl font-semibold'>konrad18v1@wp.pl</p>
+						<div className=' py-4 hover:text-primary hover:scale-110 ease duration-100'>
+							<a href='mailto:konrad18v1@wp.pl' className='flex gap-2'>
+								<GrMail size={30} />
+								<p className='text-xl font-semibold'>konrad18v1@wp.pl</p>
+							</a>
 						</div>
 					</div>
 

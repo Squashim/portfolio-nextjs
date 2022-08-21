@@ -20,21 +20,14 @@ const template = () => {
 				/>
 				<div className='px-6 absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2'>
 					<h2 className='py-4'>E-commerce Shoes Page</h2>
-					<h3 className='font-semibold text-primary'>HTML / SCSS / REACT</h3>
+					<h3 className='font-semibold text-primary'>HTML / SASS / REACT</h3>
 				</div>
 			</div>
 
 			<div className='max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 pt-16 px-6'>
 				<div className='col-span-4 '>
 					<h2>O Projekcie</h2>
-					<p className='py-6 first-letter:text-primary first-letter:font-semibold'>
-						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi
-						voluptate ut blanditiis facilis quis ducimus quaerat labore,
-						doloremque veniam earum numquam perferendis nobis dolorem
-						dignissimos, unde dicta. Omnis voluptatum cupiditate necessitatibus.
-						Quam nostrum id explicabo maxime. Adipisci tempora ratione
-						necessitatibus?
-					</p>
+					<p className='py-6  first-letter:font-semibold'></p>
 					<a href='https://squashim.github.io/ecommerce-shoes/' target='_blank'>
 						<button className='shadow-lg dark:shadow-black shadow-black/20 ease duration-100 hover:scale-105 px-8 py-2 mt-4 dark:hover:bg-transparent hover:border-primary hover:bg-transparent hover:text-dark text-light border-dark bg-dark dark:hover:text-light tracking-wider md:mr-10 mr-5 dark:bg-light dark:text-dark font-bold uppercase rounded-md border-2'>
 							Live

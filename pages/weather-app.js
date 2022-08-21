@@ -29,7 +29,7 @@ const template = () => {
 			<div className='max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 pt-16 px-6'>
 				<div className='col-span-4 '>
 					<h2>O Projekcie</h2>
-					<p className='py-6 first-letter:text-primary first-letter:font-semibold'>
+					<p className='py-6  first-letter:font-semibold'>
 						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi
 						voluptate ut blanditiis facilis quis ducimus quaerat labore,
 						doloremque veniam earum numquam perferendis nobis dolorem
@@ -57,13 +57,13 @@ const template = () => {
 						<p className='text-center font-bold pb-4'>Technologie</p>
 						<div className='grid grid-cols-3 md:grid-cols-1 '>
 							<p className='dark:text-light text-dark py-2 flex items-center uppercase gap-2'>
-								<RiRadioButtonFill className='pr-1 text-primary' /> react
+								<RiRadioButtonFill className='pr-1 text-primary' /> nextjs
 							</p>
 							<p className='dark:text-light text-dark py-2 flex items-center uppercase gap-2'>
 								<RiRadioButtonFill className='pr-1 text-primary' /> tailwind
 							</p>
 							<p className='dark:text-light text-dark py-2 flex items-center uppercase gap-2'>
-								<RiRadioButtonFill className='pr-1 text-primary' /> nextjs
+								<RiRadioButtonFill className='pr-1 text-primary' /> REACT
 							</p>
 							<p className='dark:text-light text-dark py-2 flex items-center uppercase gap-2'>
 								<RiRadioButtonFill className='pr-1 text-primary' /> weather api

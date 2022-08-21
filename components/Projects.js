@@ -5,6 +5,8 @@ import cardDetails from "../public/assets/card_details.png";
 import tipCalculator from "../public/assets/tip_calculator.png";
 import { SiGithub } from "react-icons/si";
 import weatherImg from "../public/assets/weather_app.png";
+import dropdownImg from "../public/assets/dropdown-page.png";
+import adviceImg from "../public/assets/advice.png";
 
 const Projects = () => {
 	return (
@@ -18,7 +20,7 @@ const Projects = () => {
 					<ProjectItem
 						src={shoesImg}
 						title='E-commerce Product Page'
-						tech='HTML / SCSS / REACT'
+						tech='HTML / SASS / REACT'
 						page={"e-commerce-shoes"}
 					/>
 					<ProjectItem
@@ -38,6 +40,18 @@ const Projects = () => {
 						title='Tip Calculator'
 						tech='HTML / JS / SASS / CSS'
 						page={"tip-calculator"}
+					/>
+					<ProjectItem
+						src={dropdownImg}
+						title='Website With Dropdown Menu'
+						tech='HTML / JS / SASS / CSS'
+						page={"intro-page-w-dropdown"}
+					/>
+					<ProjectItem
+						src={adviceImg}
+						title='Advice Generator'
+						tech='HTML / CSS / JS'
+						page={"advice-generator"}
 					/>
 				</div>
 				<div className='text-center py-6  mx-auto flex flex-col px-2'>
