@@ -27,7 +27,23 @@ const template = () => {
 			<div className='max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 pt-16 px-6'>
 				<div className='col-span-4 '>
 					<h2>O Projekcie</h2>
-					<p className='py-6  first-letter:font-semibold'></p>
+					<p className='py-6  first-letter:font-semibold'>
+						Jest to pierwszy projekt, do którego użyłem REACT'a. Strona ma
+						przypominać sklep internetowy. Użytkownik może otworzyć swój koszyk,
+						dodawać do niego przedmiot w wybranej przez siebie ilości, a także
+						usuwać je usuwać. W zależności od wielkości ekranu użytkownik widzi
+						różny układ stron, może oglądać zdjęcia przedmiotu z użyciem
+						strzałek lub klikając na dany obraz. Na dużym ekranie po kliknięciu
+						na zdjęcie wyświetla się jego duży podgląd. Dodatkowo aktywne
+						zdjęcie jest podświetlone. Pomysł na stronę został zaczerpnięty z
+						serwisu{" "}
+						<a
+							href='https://www.frontendmentor.io/'
+							className='italic font-semibold text-primary'>
+							Frontend Mentor
+						</a>
+						.
+					</p>
 					<a href='https://squashim.github.io/ecommerce-shoes/' target='_blank'>
 						<button className='shadow-lg dark:shadow-black shadow-black/20 ease duration-100 hover:scale-105 px-8 py-2 mt-4 dark:hover:bg-transparent hover:border-primary hover:bg-transparent hover:text-dark text-light border-dark bg-dark dark:hover:text-light tracking-wider md:mr-10 mr-5 dark:bg-light dark:text-dark font-bold uppercase rounded-md border-2'>
 							Live

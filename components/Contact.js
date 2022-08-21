@@ -53,7 +53,7 @@ const Contact = () => {
 					</div>
 				</div>
 
-				<div className='text-primary p-3 mb-4 right-2 absolute bottom-2 bg-darkGray rounded-full hover:scale-110 ease duration-100  cursor-pointer'>
+				<div className='text-primary p-3 mb-4 right-2 shadow-lg dark:shadow-black shadow-black/20 absolute bottom-2 bg-lightGray dark:bg-darkGray rounded-full hover:scale-110 ease duration-100  cursor-pointer'>
 					<Link href='/'>
 						<BsChevronUp className='cursor-pointer' size={30} />
 					</Link>

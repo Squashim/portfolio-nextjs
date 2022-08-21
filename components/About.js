@@ -5,8 +5,8 @@ const About = () => {
 	return (
 		<div
 			id='about'
-			className='w-full md:h-screen px-6 flex items-center py-16 dark:bg-darkGray bg-lightGray'>
-			<div className='max-w-[1240px] m-auto md:grid grid-cols-3 gap-8'>
+			className='w-full md:h-auto px-6 flex items-center py-16 dark:bg-darkGray bg-lightGray'>
+			<div className='max-w-[1240px] m-auto md:grid grid-cols-3 gap-8 py-12'>
 				<div className='col-span-2'>
 					<p className='text-xl tracking-widest uppercase text-primary'>
 						O mnie
@@ -19,7 +19,7 @@ const About = () => {
 						na własny użytek, gdyż sprawia mi to dużą przyjemność i jestem w
 						stanie wiele się z nich nauczyć. Z każdym kolejnym projektem staram
 						się coraz bardziej rozwijać, poprzez tworzenie bardziej
-						zaawansowanych witryn. Aktualnie poszukuje stażu aby zdobyć
+						zaawansowanych witryn. Aktualnie poszukuje stażu, aby zdobyć
 						jakiekolwiek doświadczenie zawodowe.
 					</p>
 					<h3 className='text-primary font-medium mt-2'>Personalne:</h3>
@@ -44,7 +44,7 @@ const About = () => {
 								Wykształcenie: <span className='text-primary'>Wyższe</span>
 							</h3>
 							<p className='mt-2'>
-								Rozpoczęcie studiów inżynieryjskich na Politechnice Lubelskiej,
+								Rozpoczęcie studiów inżynierskich na Politechnice Lubelskiej,
 								kierunek informatyka.
 							</p>
 						</div>
@@ -61,18 +61,18 @@ const About = () => {
 					</div>
 
 					<Link href='/#projects'>
-						<button className='shadow-lg dark:shadow-black shadow-black/20 ease duration-100 hover:scale-105 px-8 py-2 mt-4 dark:hover:bg-transparent hover:border-primary hover:bg-transparent hover:text-dark text-light border-dark bg-dark dark:hover:text-light tracking-wider md:mr-10 mr-5 dark:bg-light dark:text-dark font-bold uppercase rounded-md border-2'>
+						<button className='w-full sm:w-auto shadow-lg dark:shadow-black shadow-black/20 ease duration-100 hover:scale-105 px-8 py-2 mt-4 dark:hover:bg-transparent hover:border-primary hover:bg-transparent hover:text-dark text-light border-dark bg-dark dark:hover:text-light tracking-wider md:mr-10 mr-5 dark:bg-light dark:text-dark font-bold uppercase rounded-md border-2'>
 							Sprawdź moje projekty!
 						</button>
 					</Link>
 
 					<Link href='/#contact'>
-						<button className='shadow-lg dark:shadow-black shadow-black/20 ease duration-100 hover:scale-105 px-8 py-2 mt-4 dark:hover:bg-primary hover:border-primary hover:bg-primary dark:hover:text-dark text-light border-dark bg-dark  tracking-wider  md:mr-10 dark:bg-light dark:text-dark font-bold uppercase rounded-md border-2'>
+						<button className='w-full sm:w-auto shadow-lg dark:shadow-black shadow-black/20 ease duration-100 hover:scale-105 px-8 py-2 mt-4 dark:hover:bg-primary hover:border-primary hover:bg-primary dark:hover:text-dark text-light border-dark bg-dark  tracking-wider  md:mr-10 dark:bg-light dark:text-dark font-bold uppercase rounded-md border-2'>
 							Kontakt!
 						</button>
 					</Link>
 				</div>
-				<div className='w-full my-6 h-auto m-auto shadow-xl dark:hover:bg-primary hover:bg-primary bg-darkGray dark:bg-dark shadow-black/20 dark:shadow-black rounded-xl flex items-center justify-center p-4 hover:scale-105 ease-in duration-300'>
+				<div className='md:max-h-[600px] md:my-auto my-6 w-full  h-auto m-auto shadow-xl dark:hover:bg-primary hover:bg-primary bg-darkGray dark:bg-dark shadow-black/20 dark:shadow-black rounded-xl flex items-center justify-center p-4 hover:scale-105 ease-in duration-300'>
 					<img className='rounded-xl' src='/assets/picture.png' alt='picture' />
 				</div>
 			</div>

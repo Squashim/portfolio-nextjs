@@ -30,12 +30,21 @@ const template = () => {
 				<div className='col-span-4 '>
 					<h2>O Projekcie</h2>
 					<p className='py-6  first-letter:font-semibold'>
-						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi
-						voluptate ut blanditiis facilis quis ducimus quaerat labore,
-						doloremque veniam earum numquam perferendis nobis dolorem
-						dignissimos, unde dicta. Omnis voluptatum cupiditate necessitatibus.
-						Quam nostrum id explicabo maxime. Adipisci tempora ratione
-						necessitatibus?
+						Strona, do której stworzenia wykorzystałem API pogodowe, NextJs'a, a
+						do stylizacji Tailwind'a. Po wpisaniu w pasek wyszukiwania
+						miejscowości, aplikacja wyświetla podstawowe dane pogodowe, takie
+						jak temperatura, zachmurzenie, wilgotność, opady itd. W niedługim
+						czasie mam zamiar usprawnić stronę i stworzyć możliwość wyświetlenia
+						dodatkowych informacji, zamiany jednostek temperatury (obecnie tylko
+						stopnie Celsjusza), a także sprawić aby zdjęcie w tle było
+						dopasowywane do wyświetlonej pogody. Do stworzenia strony
+						wykorzystałem poradnik z kanału{" "}
+						<a
+							href='https://www.youtube.com/channel/UCmT9TwcIb_yAe7-Uqhn3fBA/featured'
+							className='italic text-primary font-semibold'>
+							Code Commerce
+						</a>
+						.
 					</p>
 					<a
 						href='https://nextjs-weather-m6r069sl7-squashim.vercel.app/'

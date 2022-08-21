@@ -13,7 +13,6 @@ const Navbar = () => {
 
 	const [invertedComponentsColor, setInvertedComponentsColor] =
 		useState("#252422");
-
 	const router = useRouter();
 	const handleNav = () => setNav(!nav);
 
@@ -48,25 +47,25 @@ const Navbar = () => {
 				</div>
 				<div className='h-full flex'>
 					<ul className='hidden md:flex uppercase my-auto mb-[4px] dark:text-light text-dark'>
-						<NavbarLink name={"Home"} site={"home"} from={0} to={950} />
-						<NavbarLink name={"O mnie"} site={"about"} from={960} to={1750} />
+						<NavbarLink name={"Home"} site={"home"} from={0} to={830} />
+						<NavbarLink name={"O mnie"} site={"about"} from={835} to={1735} />
 						<NavbarLink
 							name={"Technologie"}
 							site={"skills"}
-							from={1760}
-							to={2550}
+							from={1740}
+							to={2635}
 						/>
 						<NavbarLink
 							name={"Portfolio"}
 							site={"projects"}
-							from={2560}
-							to={3250}
+							from={2640}
+							to={4275}
 						/>
 						<NavbarLink
 							name={"Kontakt"}
 							site={"contact"}
-							from={3260}
-							to={4300}
+							from={4280}
+							to={4400}
 						/>
 						<ThemeChanger />
 					</ul>
